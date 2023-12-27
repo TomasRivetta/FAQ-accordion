@@ -1,9 +1,0 @@
-/* Base */
-
-@import url("./base/normalize.css");
-@import url("./base/useful.css");
-@import url("./base/variables.css");
-
-/* Pages */
-
-@import url("./pages/init.css");
