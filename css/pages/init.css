@@ -53,7 +53,8 @@
     color: #9c34cb;
 }
 
-.faq-icon-plus {
+.faq-icon-plus,
+.faq-icon-minor {
     width: auto;
     height: auto;
 }
@@ -67,10 +68,29 @@
     cursor: pointer;
 }
 
-.faq-res {
+.res {
     color: var(--Grayish-purple);
     display: none;
 }
+
+.show {
+    color: var(--Grayish-purple);
+    display: flex;
+    margin-top: 5%;
+}
+
+.ocultar {
+    display: none;
+}
+
+.showIcon {
+    display: flex;
+}
+
+.notIcon {
+    display: none;
+}
+
 
 .attribution {
     font-size: 11px;
@@ -79,4 +99,11 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+    .card-main {
+        width: 80%;
+    }
+
 }
