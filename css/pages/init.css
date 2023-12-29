@@ -101,7 +101,7 @@
     color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 480px) {
     .card-main {
         width: 80%;
     }
