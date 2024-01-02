@@ -1,9 +1,19 @@
-import { resToFaq } from "./function/res.js";
+import { resToFaq, resToFaqOccult as resToFaqOccult } from "./function/res.js";
 
 const faqs = document.querySelectorAll("#faq")
 
+let num = 0;
+
 faqs.forEach(element => {
     element.addEventListener("click", () => {
-        resToFaq(element.dataset.faq)
+
+        if (num == 0) {
+            resToFaq(element.dataset.faq)
+            num++
+        }
+        else {
+            resToFaqOccult(element.dataset.faq)
+            num = 0
+        }
     })
 })

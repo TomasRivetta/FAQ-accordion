@@ -12,32 +12,38 @@ export function resToFaq(valor) {
 
         res = elementRes.dataset.res
 
-
         if (res === valor) {
 
             responses[res].classList.add("show")
             iconsPlus[res].classList.add("notIcon")
             iconsMinor[res].classList.add("showIcon")
+            responses[res].classList.remove("hidden")
 
         }
-
     })
-
-
 }
 
-// if(iconsPlus[res].classList.contains("notIcon")){
-                
-//     iconsPlus[res].classList.remove("notIcon")
-//     iconsPlus[res].classList.add("showIcon")
-//     iconsPlus[res].classList.add("faq-icon-plus")
+export function resToFaqOccult(valor) {
 
+    let res
 
-//     iconsMinor[res].classList.remove("showIcon")
-//     iconsPlus[res].classList.add("notIcon")
+    responses.forEach(elementRes => {
 
-    
-//     responses[res].classList.add("ocultar")
-//     responses[res].classList.add("res")
-//     responses[res].classList.remove("show")
-// }
+        res = elementRes.dataset.res
+
+        if (res === valor) {
+
+            if (iconsPlus[res].classList.contains("notIcon")) {
+
+                iconsMinor[res].classList.remove("showIcon")
+
+                iconsPlus[res].classList.remove("notIcon")
+                iconsPlus[res].classList.add("showIcon")
+
+                responses[res].classList.add("hidden")
+                responses[res].classList.remove("show")
+
+            }
+        }
+    })
+}
